@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Seas to Trees</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- step 1: add the following line to make use of icons -->
+    <!-- link to awesome font css, so we can use different icons on our website -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- step 1: end -->
+    <link rel="stylesheet" href="./css/w3.css" />
+    <style>
+      body {
+        font-family: Montserrat, Arial, Sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: Montserrat, Arial, Sans-serif;
+        letter-spacing: 4px;
+      }
+       /* my css */
+      .my-img-size-1 {
+        max-width: 300px;
+      }
+
+      .my-img-size-2 {
+        max-width: 500px;
+      }
+
+      /* place the element to the left */
+      .my-float-left {
+        float: left;
+        padding-right: 20px;
+      }
+
+      /* place the element to the right */
+      .my-float-right {
+        float: right;
+        padding-left: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <!-- step 2: change text color and background color for all menu options and icons -->
+      <!-- sand color background, brown text -->
+      <div
+        class="w3-bar w3-deep-green w3-padding w3-card w3-text-deep-green"
+        style="letter-spacing: 4px"
+      >
+
+        <!-- text color also applies to icon color -->
+        <!-- shopping cart and search icons -->
+
+        <!-- step 1: add shopping cart and search icons -->
+        <!-- Font Awesome 4 reference : https://www.w3schools.com/icons/icons_reference.asp -->
+        <div>
+          <a class="w3-padding-large w3-hide-small w3-right"
+            ><i class="fa fa-shopping-basket"></i
+          ></a>
+          <a class="w3-padding-large w3-hide-small w3-right"
+            ><i class="fa fa-search"></i
+          ></a>
+        </div>
+        <!-- step 1: end -->
+        <!-- step 3: change logo text and font size -->
+        <a href="#home" class="w3-bar-item w3-button"
+        ><img src="./images/green-transparency.png" alt="Seas to Trees"
+        style="width:100px"/></a
+        >
+        <!-- step 3: end -->
+
+        <!-- Right-sided navbar links. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+          <!-- step 4: change menu option text, font size and id reference -->
+          <a href="#highlights" class="w3-bar-item w3-button w3-large"
+            >Highlights</a
+          >
+          <a href="#about us" class="w3-bar-item w3-button w3-large">About Us</a>
+           <a href="#gallery" class="w3-bar-item w3-button w3-large">Gallery</a>
+           <a href="#video" class="w3-bar-item w3-button w3-large">Video</a>
+           <a href="#eats" class="w3-bar-item w3-button w3-large">Eats</a>
+
+          <!-- step 4: end -->
+        </div>
+
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+        <a
+          href="javascript:void(0)"
+          class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+          onclick="w3_open()"
+        >
+          <!-- use the hamburger icon (menu icon) from font-awesome.min.css -->
+          <!-- step 5: change icon color -->
+          <i class="fa fa-bars w3-text-deep-green"></i>
+          <!-- step 5: end -->
+        </a>
+      </div>
+    </div>
+
+    <!-- navbar - mobile version -->
+    <!-- step 6: change mobile menu font color, size and background color -->
+    <nav
+      class="w3-sidebar w3-bar-block w3-deep-green w3-card w3-animate-left w3-hide-medium w3-hide-large w3-text-deep-green w3-large"
+      style="display: none"
+      id="mySidebar"
+    >
+      <!-- step 6: end -->
+      <a
+        href="javascript:void(0)"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button w3-large w3-padding-16"
+        >Close &times;</a
+      >
+
+      <!-- step 7: change mobile menu option text, font size and id reference -->
+      <a href="#highlights" onclick="w3_close()" class="w3-bar-item w3-button"
+        >Highlights</a
+      >
+      <a href="#about us" onclick="w3_close()" class="w3-bar-item w3-button"
+        >About Us</a
+      >
+      <a href="#gallery" onclick="w3_close()" class="w3-bar-item w3-button"
+        >Gallery</a
+        
+      >
+       <a href="#video" onclick="w3_close()" class="w3-bar-item w3-button"
+        >Video</a
+      >
+      <a href="#eats" onclick="w3_close()" class="w3-bar-item w3-button"
+        >Eats</a
+        >
+      <!-- step 7: end -->
+    </nav>
+
+    <!-- Header -->
+    <header
+      class="w3-display-container w3-content w3-wide"
+      style="max-width: 1600px; min-width: 500px"
+      id="home"
+    >
+      <img
+        class="w3-image"
+        src="/images/coast-view-686af3ac06609.jpg"
+        alt="Coast View"
+        width="1600"
+        height="800"
+      />
+      <div class="w3-display-bottomleft w3-padding-large w3-hide-small">
+        <h4 class="small-caps w3-text-cream">family adventure</h4>
+        <h1 class="w3-xxxlarge w3-text-cream w3-text-bold"> 
+          Road Trip!
+        </h1>
+        <h2 class="w3-text-cream">NorCal to Oregon Coast</h2>
+        
+      </div>
+    </header>
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width: 1100px">
+      <!-- Highligths Section -->
+      <div class="w3-row w3-padding-64" id="Highlights">
+        <div class="w3-padding-large">
+          <h1 class="w3-center">Highlights</h1>
+  <div class="w3-padding-large">
+    <h2 class="w3-center">A family adventure</h2>
+  <h5 class="w3-center">from Seas to Trees</h5>
+   <img
+                src="./images/ocean-shore-686af4da9624b.jpg"
+                class="w3-round w3-image my-float-left my-img-size-1"
+                alt="Ocean Shore"
+                style="width: 100%"
+              />
+          
+          <p>
+            paragraph 1
+          </p>
+           <div class="w3-padding-large">
+          <img
+                src="./images/dunes-686af3ac0bf72.jpg"
+                class="w3-round w3-image my-float-left my-img-size-1"
+                alt="Sand Dunes"
+                style="width: 100%"
+              />
+          <p>
+            paragraph 2
+          </p>
+        </div>
+
+      <hr />
+
+      <!-- About Us Section -->
+      <div class="w3-row w3-padding-64" id="about us">
+        <div class="w3-padding-large">
+          <h1 class="w3-center">About Us</h1>
+          <div class="w3-padding-large">
+    <h2 class="w3-center">Our Coastal Crew</h2>
+    <div class="w3-padding-large">
+  <h5 class="w3-center">Family of four</h5>
+   <img
+                src="./images/fam-sunglasses0-686af3acce985.jpg"
+                class="w3-round w3-image my-float-left my-img-size-1"
+                alt="Family photo outside"
+                style="width: 100%"
+              />
+          
+          <p>
+            paragraph 1
+          </p>
+           <div class="w3-padding-large">
+            <h2 class="w3-center">The Journey</h2>
+  <h5 class="w3-center">Map</h5>
+          <img
+                src="./images/map-of-trip-686af4dac400a.jpg"
+                class="w3-round w3-image my-float-left my-img-size-1"
+                alt="map"
+                style="width: 100%"
+              />
+          <p>
+            paragraph 2
+          </p>
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- Gallery Section -->
+      <div class="w3-container w3-padding-64" id="gallery">
+        <div class="w3-padding-large">
+        <h1 class="w3-center">Gallery</h1>
+       </div>
+      </div>
+       <hr />
+      <!-- Video Section -->
+      <div class="w3-container w3-padding-64" id="video">
+        <div class="w3-padding-large">
+        <h1 class="w3-center">Video</h1>
+       </div>
+      </div>
+       <hr />
+      <!-- Eats Section -->
+      <div class="w3-container w3-padding-64" id="eats">
+        <div class="w3-padding-large">
+        <h1 class="w3-center">Eats</h1>
+       </div>
+      </div>
+
+
+      <!-- End page content -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-light-grey w3-padding-32">
+      <p>
+        Powered by
+        <a
+          href="https://www.w3schools.com/w3css/default.asp"
+          title="W3.CSS"
+          target="_blank"
+          class="w3-hover-text-green"
+          >w3.css</a
+        >
+      </p>
+    </footer>
+    <!-- step 4: add javascript to support responsive navbar -->
+    <script>
+      // Toggle between showing and hiding the sidebar when clicking the menu icon
+      var mySidebar = document.getElementById("mySidebar");
+
+      function w3_open() {
+        if (mySidebar.style.display === "block") {
+          mySidebar.style.display = "none";
+        } else {
+          mySidebar.style.display = "block";
+        }
+      }
+
+      // Close the sidebar with the close button
+      function w3_close() {
+        mySidebar.style.display = "none";
+      }
+    </script>
+    <!-- step 4: end -->
+  </body>
+</html>
