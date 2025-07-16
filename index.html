@@ -45,6 +45,11 @@
         float: right;
         padding-left: 20px;
         }
+         /* class with scrollabe effect */
+      .my-scrolling {
+        height: 300px;
+        overflow: auto;
+      }
     </style>
   </head>
   <body>
@@ -81,10 +86,8 @@
         <!-- Right-sided navbar links. Hide them on small screens -->
         <div class="w3-right w3-hide-small">
           <!-- step 4: change menu option text, font size and id reference -->
-          <a href="#highlights" class="w3-bar-item w3-button w3-large"
-            >Highlights</a
-          >
-          <a href="#about us" class="w3-bar-item w3-button w3-large">About Us</a>
+          <a href="#highlights" class="w3-bar-item w3-button w3-large">Highlights</a>
+          <a href="#aboutus" class="w3-bar-item w3-button w3-large">About Us</a>
            <a href="#gallery" class="w3-bar-item w3-button w3-large">Gallery</a>
            <a href="#video" class="w3-bar-item w3-button w3-large">Video</a>
            <a href="#eats" class="w3-bar-item w3-button w3-large">Eats</a>
@@ -93,15 +96,15 @@
         </div>
 
         <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+         <!-- Source: https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_startup -->
         <a
           href="javascript:void(0)"
           class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
           onclick="w3_open()"
         >
           <!-- use the hamburger icon (menu icon) from font-awesome.min.css -->
-          <!-- step 5: change icon color -->
-          <i class="fa fa-bars w3-text-deep-green"></i>
-          <!-- step 5: end -->
+          <i class="fa fa-bars"></i>
+        </a>
         </a>
       </div>
     </div>
@@ -169,55 +172,131 @@
       <!-- Highligths Section -->
       <div class="w3-row w3-padding-64" id="Highlights">
         <div class="w3-padding-large">
-          <h1 class="w3-center">Highlights</h1>
-  <div class="w3-padding-large">
-    <h2 class="w3-center">A family adventure</h2>
-  <h5 class="w3-center">from Seas to Trees</h5>
-   <img
-                src="./images/ocean-shore-686af4da9624b.jpg"
-                class="w3-round w3-image my-float-left my-img-size-1"
-                alt="Ocean Shore"
-                style="width: 100%"
-              />
-          
-          <p>
-            paragraph 1
-          </p>
-           <div class="w3-padding-large">
-          <img
-                src="./images/dunes-686af3ac0bf72.jpg"
-                class="w3-round w3-image my-float-left my-img-size-1"
-                alt="Sand Dunes"
-                style="width: 100%"
-              />
-          <p>
-            paragraph 2
-          </p>
+          <h4 class="small-caps w3-text-deep-green">highlights</h4>
+    <h2 class="w3-text-deep-green w3-text-bold">A family adventure</h2>
+  <h2 class="w3-text-deep-green">from Seas to Trees</h2>
         </div>
+        <img class="mySlides" src="./images/forest-686af4957e9f2.jpg" style="width: 100%" />
+         <img
+              class="mySlides"
+              src="./images/dunes-686af3ac0bf72.jpg"
+              style="width: 100%; display: none"
+            />
+            <img
+              class="mySlides"
+              src="./images/ocean-shore-686af4da9624b.jpg"
+              style="width: 100%; display: none"
+            />
+            </div>
+   <div class="w3-col s3">
+            <!-- "currentDiv(1)" link to 1st slide -->
+            <!-- demo class is used by a javascript function to turn off the opacity effect -->
+            <img
+              class="demo w3-opacity w3-hover-opacity-off"
+              src="./images/forest-686af4957e9f2.jpg"
+              style="width: 100%; cursor: pointer; padding: 7px"
+              onclick="currentDiv(1)"
+            />
+    </div>
+          <div class="w3-col s3">
+            <!-- "currentDiv(2)" link to 2nd slide -->
+            <!-- demo class is used by a javascript function to turn off the opacity effect -->
+            <img
+              class="demo w3-opacity w3-hover-opacity-off"
+              src="./images/dunes-686af3ac0bf72.jpg"
+              style="width: 100%; cursor: pointer; padding: 7px"
+              onclick="currentDiv(2)"
+            />
+    </div>
+          <div class="w3-col s3">
+            <!-- "currentDiv(3)" link to 3rd slide -->
+            <!-- demo class is used by a javascript function to turn off the opacity effect -->
+            <img
+              class="demo w3-opacity w3-hover-opacity-off"
+              src="./images/ocean-shore-686af4da9624b.jpg"
+              style="width: 100%; cursor: pointer; padding: 7px"
+              onclick="currentDiv(3)"
+            />
+            
+        </div>
+        <div class="w3-row w3-padding-64" id="highlights">
+        <div class="w3-padding-large">
+ <h4 class="w3-col s4 small-caps w3-text-deep-green">inspiration</h4>
+    
+   <div class="w3-row">
+ <div class="w3-col s4 w3-padding w3-text-deep-green">
+<div
+                class="w3-text-cream"
+                style="
+                  margin-left: -16px;
+                  margin-right: -16px;
+                  margin-top: -18px;
+                "
+              >
+                <h2 class="w3-text-deep-green w3-text-bold">Seas to Trees</h2>
+              </div>
+ <div class="my-scrolling" style="padding-right: 10px">
+                <p>
+                  What began as a family craving adventure turned into a journey through 
+                  the ever-changing landscapes where ocean spray meets forest mist. With 
+                  two kids in the backseat and a car packed with snacks, hiking boots, and 
+                  way too many stuffed animals, we hit the road in search of something more—more 
+                  wonder, more wild, more time together. From windswept beaches to towering 
+                  redwoods, every stop offers a new chance to explore, climb, splash, and discover. 
+                  Our route winds along the coast and deep into the trees, where curiosity leads 
+                  the way and the map is only half the story. This blog is our trail journal—a 
+                  mix of salty air, muddy boots, spontaneous detours, and wide-eyed moments we’ll never forget.
+
+                </p>
+                </div>
+               
+                <div>
+                   <div class="w3-padding-large"></div>
+                <img src="./images/family-fun-pic-686af49452991.jpg" class="w3-round w3-image my-float-left my-img-size-1" 
+                alt="various types of vegetables" style="width: 100%">
+                <div class="w3-padding-large"></div>
+                <div></div>
+                
+   </div>
+       <div></div>
+      <hr />
+ </div>
+      </div>
 
       <hr />
-
       <!-- About Us Section -->
-      <div class="w3-row w3-padding-64" id="about us">
+      <div class="w3-row w3-padding-64" id="aboutus" style="background-color: darkgreen;">
         <div class="w3-padding-large">
-          <h1 class="w3-center">About Us</h1>
+          <h4 class="small-caps w3-text-deep-green">about us</h4>
+    <h2 class="w3-text-deep-green w3-text-bold">Our Coastal Crew</h2>
+  <h2 class="w3-text-deep-green">Family of four</h2>
           <div class="w3-padding-large">
-    <h2 class="w3-center">Our Coastal Crew</h2>
-    <div class="w3-padding-large">
-  <h5 class="w3-center">Family of four</h5>
+    
    <img
                 src="./images/fam-sunglasses0-686af3acce985.jpg"
-                class="w3-round w3-image my-float-left my-img-size-1"
+                class="w3-round w3-image my-float-right my-img-size-1"
                 alt="Family photo outside"
                 style="width: 100%"
               />
           
           <p>
-            paragraph 1
+            Our journey follows the winding coastal highways, where ocean meets forest, 
+            and every turn offers something new to discover.  This travelogue is a snapshot 
+            of our experience—breathtaking ocean views, misty forest hikes, epic sand dunes, 
+            and all the “wow” moments in between. We’re chasing fresh air, unforgettable sights, 
+            and the kind of memories that only come from hitting the open road together.  
+            Along the way, we’re sharing our favorite finds, tips for traveling with kids, 
+            and lots of photos to bring the trip to life. Whether you’re planning your own 
+            coastal adventure or just coming along for the ride, we’re glad you’re here!
           </p>
+           </div>
+
+       
+          <div class="w3-padding-large">
            <div class="w3-padding-large">
-            <h2 class="w3-center">The Journey</h2>
-  <h5 class="w3-center">Map</h5>
+            <h4 class="small-caps w3-text-deep-green">map</h4>
+    <h2 class="w3-text-deep-green w3-text-bold">The Journey</h2>
+ 
           <img
                 src="./images/map-of-trip-686af4dac400a.jpg"
                 class="w3-round w3-image my-float-left my-img-size-1"
@@ -225,11 +304,21 @@
                 style="width: 100%"
               />
           <p>
-            paragraph 2
+            Our journey follows the winding coastal highways, where ocean meets forest, 
+            and every turn offers something new to discover.  This travelogue is a snapshot 
+            of our experience—breathtaking ocean views, misty forest hikes, epic sand dunes, 
+            and all the “wow” moments in between. We’re chasing fresh air, unforgettable sights, 
+            and the kind of memories that only come from hitting the open road together.  
+            Along the way, we’re sharing our favorite finds, tips for traveling with kids, 
+            and lots of photos to bring the trip to life. Whether you’re planning your own 
+            coastal adventure or just coming along for the ride, we’re glad you’re here!
           </p>
         </div>
       </div>
+ </div>
+      </div>
 
+      
       <hr />
 
       <!-- Gallery Section -->
@@ -273,7 +362,7 @@
     <!-- step 4: add javascript to support responsive navbar -->
     <script>
       // Toggle between showing and hiding the sidebar when clicking the menu icon
-      var mySidebar = document.getElementById("mySidebar");
+ var mySidebar = document.getElementById("mySidebar");
 
       function w3_open() {
         if (mySidebar.style.display === "block") {
@@ -287,6 +376,52 @@
       function w3_close() {
         mySidebar.style.display = "none";
       }
+      // mobile version end
+
+      // carousel slideshow begin
+      var myIndex = 0;
+      carousel();
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+          myIndex = 1;
+        }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+      }
+
+      // slideshow - carousel
+      // hook each carousel button
+      function currentDiv(n) {
+        showDivs((slideIndex = n));
+        myIndex = n;
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+        }
+        x[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " w3-opacity-off";
+      }
+      // carousel slideshow end
     </script>
     <!-- step 4: end -->
   </body>
