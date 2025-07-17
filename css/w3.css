@@ -1351,6 +1351,10 @@ a {
   color: #f8f3e9 !important;
   background-color: #0f4236 !important;
 }
+.w3-greenb,
+.w3-hover-greenb:hover {
+  background-color: #0f4236 !important;
+  }
 .w3-deep-green,
 .w3-hover-deep-green:hover {
   color: #0f4236 !important;

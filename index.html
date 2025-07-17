@@ -15,6 +15,8 @@
     <style>
       body {
         font-family: Montserrat, Arial, Sans-serif;
+        font: size 16px;
+        line-height: 1.5;
       }
       h1,
       h2,
@@ -24,7 +26,13 @@
       h6 {
         font-family: Montserrat, Arial, Sans-serif;
         letter-spacing: 4px;
+         }
+         a {
+        text-decoration: none;
+        color: #f8f3e9;
+        cursor: pointer;
       }
+      
        /* my css */
       .my-img-size-1 {
         max-width: 300px;
@@ -128,7 +136,7 @@
       <a href="#highlights" onclick="w3_close()" class="w3-bar-item w3-button"
         >Highlights</a
       >
-      <a href="#about us" onclick="w3_close()" class="w3-bar-item w3-button"
+      <a href="#aboutus" onclick="w3_close()" class="w3-bar-item w3-button"
         >About Us</a
       >
       <a href="#gallery" onclick="w3_close()" class="w3-bar-item w3-button"
@@ -146,7 +154,7 @@
 
     <!-- Header -->
     <header
-      class="w3-display-container w3-content w3-wide"
+      class="w3-display-container w3-content w3-wide w3-deep-green"
       style="max-width: 1600px; min-width: 500px"
       id="home"
     >
@@ -170,7 +178,10 @@
     <!-- Page content -->
     <div class="w3-content" style="max-width: 1100px">
       <!-- Highligths Section -->
-      <div class="w3-row w3-padding-64" id="Highlights">
+      <div class="w3-row w3-padding-64 w3-deep-green" id="highlights">
+        <div
+        class="w3-deep-green"
+      >
         <div class="w3-padding-large">
           <h4 class="small-caps w3-text-deep-green">highlights</h4>
     <h2 class="w3-text-deep-green w3-text-bold">A family adventure</h2>
@@ -219,7 +230,13 @@
             />
             
         </div>
+        <div></div>
+        
         <div class="w3-row w3-padding-64" id="highlights">
+          <div>
+            
+                  
+                  
         <div class="w3-padding-large">
  <h4 class="w3-col s4 small-caps w3-text-deep-green">inspiration</h4>
     
@@ -250,10 +267,9 @@
                 </p>
                 </div>
                
-                <div>
-                   <div class="w3-padding-large"></div>
+                 <div class="w3-padding-large"></div>
                 <img src="./images/family-fun-pic-686af49452991.jpg" class="w3-round w3-image my-float-left my-img-size-1" 
-                alt="various types of vegetables" style="width: 100%">
+                alt="family photo" style="width: 100%">
                 <div class="w3-padding-large"></div>
                 <div></div>
                 
@@ -265,12 +281,12 @@
 
       <hr />
       <!-- About Us Section -->
-      <div class="w3-row w3-padding-64" id="aboutus" style="background-color: darkgreen;">
+      <div class="w3-row w3-greenb" id="aboutus";">
         <div class="w3-padding-large">
-          <h4 class="small-caps w3-text-deep-green">about us</h4>
-    <h2 class="w3-text-deep-green w3-text-bold">Our Coastal Crew</h2>
-  <h2 class="w3-text-deep-green">Family of four</h2>
-          <div class="w3-padding-large">
+          <h4 class="small-caps w3-cream">about us</h4>
+    <h2 class="w3-cream w3-text-bold">Our Coastal Crew</h2>
+  <h2 class="w3-text-cream">Family of four</h2>
+          <div class="w3-padding-16">
     
    <img
                 src="./images/fam-sunglasses0-686af3acce985.jpg"
@@ -279,7 +295,7 @@
                 style="width: 100%"
               />
           
-          <p>
+          <p class="w3-cream">
             Our journey follows the winding coastal highways, where ocean meets forest, 
             and every turn offers something new to discover.  This travelogue is a snapshot 
             of our experience—breathtaking ocean views, misty forest hikes, epic sand dunes, 
@@ -288,14 +304,34 @@
             Along the way, we’re sharing our favorite finds, tips for traveling with kids, 
             and lots of photos to bring the trip to life. Whether you’re planning your own 
             coastal adventure or just coming along for the ride, we’re glad you’re here!
+            <!-- step 1: use <span> tag to mark up a part of a text, or a part of a document -->
+              <!--    The <span> tag is an inline container -->
+              <!--    Source: https://www.w3schools.com/tags/tag_span.asp -->
+              <span>
+                <br>
+                Reference:
+                <!-- step 2: use <a> tag to create a hyperlink -->
+                <!--    The hyperlink can be internal and external -->
+                <!--    Use "_blank" for the target property to open a page in a new tab -->
+                <!-- step 3 (optional): customize <a> tag styles - see <style> tag above -->
+                <a
+                  href="https://www.instagram.com/j9wolfe/"
+                  target="_blank"
+                  class="w3-hover-opacity"
+                >
+                  https://en.wikipedia.org/wiki/Vegetable</a
+                >
+              </span>
+            </p>
+          </div>
           </p>
            </div>
 
        
           <div class="w3-padding-large">
            <div class="w3-padding-large">
-            <h4 class="small-caps w3-text-deep-green">map</h4>
-    <h2 class="w3-text-deep-green w3-text-bold">The Journey</h2>
+            <h4 class="small-caps w3-cream">map</h4>
+    <h2 class="w3-cream w3-text-bold">The Journey</h2>
  
           <img
                 src="./images/map-of-trip-686af4dac400a.jpg"
@@ -303,7 +339,7 @@
                 alt="map"
                 style="width: 100%"
               />
-          <p>
+          <p class="w3-cream">
             Our journey follows the winding coastal highways, where ocean meets forest, 
             and every turn offers something new to discover.  This travelogue is a snapshot 
             of our experience—breathtaking ocean views, misty forest hikes, epic sand dunes, 
@@ -312,6 +348,21 @@
             Along the way, we’re sharing our favorite finds, tips for traveling with kids, 
             and lots of photos to bring the trip to life. Whether you’re planning your own 
             coastal adventure or just coming along for the ride, we’re glad you’re here!
+          <span>
+                <br>
+                Reference:
+                <!-- step 2: use <a> tag to create a hyperlink -->
+                <!--    The hyperlink can be internal and external -->
+                <!--    Use "_blank" for the target property to open a page in a new tab -->
+                <!-- step 3 (optional): customize <a> tag styles - see <style> tag above -->
+                <a
+                  href="https://www.instagram.com/j9wolfe/"
+                  target="_blank"
+                  class="w3-hover-opacity"
+                >
+                  https://en.wikipedia.org/wiki/Vegetable</a
+                >
+              </span>
           </p>
         </div>
       </div>
@@ -324,7 +375,140 @@
       <!-- Gallery Section -->
       <div class="w3-container w3-padding-64" id="gallery">
         <div class="w3-padding-large">
-        <h1 class="w3-center">Gallery</h1>
+        <h4 class="small-caps w3-text-deep-green">gallery</h4>
+    <h2 class="w3-text-deep-green w3-text-bold">Seas to Trees</h2>
+  <h2 class="w3-text-deep-green">NorCal to Oregon Coast</h2>
+          <div class="w3-padding-16">
+        <!-- step 1: add image files to img folder -->
+          <!--    each lightbox should have a thumbnail image and a larger image -->
+          <!-- step 2: add thumbnail image -->
+          <!-- step 3: add modal (background image and close button) -->
+          <!-- create first row to have 3 thumbnail images, 
+             each image takes up 4 columns out of the 12 columns grid,
+             we use classes w3-col s4 -->
+          <!-- first row of thumbnail images created below -->
+          <div class="w3-row-padding" style="margin: 15px 0px">
+            <!-- first thumbnail image created below -->
+            <div class="w3-col s4">
+              <img
+                src="./images/forest-686af4957e9f2.jpg"
+                style="width: 100%; cursor: zoom-in"
+                onclick="document.getElementById('modal01').style.display='block'"
+                class="w3-hover-shadow"
+              />
+            </div>
+
+            <!-- second thumbnail image created below
+               we set 'modal02' in getElementById('modal02') -->
+            <div class="w3-col s4">
+              <img
+                src="./images/ocean-shore-686af4da9624b.jpg"
+                style="width: 100%; cursor: zoom-in"
+                onclick="document.getElementById('modal02').style.display='block'"
+                class="w3-hover-shadow"
+              />
+            </div>
+             <!-- third thumbnail image created below
+               we set 'modal02' in getElementById('modal02') -->
+            <div class="w3-col s4">
+              <img
+                src="./images/coast-view-686af3ac06609.jpg"
+                style="width: 100%; cursor: zoom-in"
+                onclick="document.getElementById('modal03').style.display='block'"
+                class="w3-hover-shadow"
+              />
+            </div>
+
+            <!-- continue to add the last thumbnail image in the first row here -->
+             
+            <div>
+              
+             
+            </div>
+          </div>
+
+          <!-- if needed, follow the samples above to create second row of thumbnail images here -->
+           
+          <div class="w3-row-padding" style="margin: 15px 0px">
+            <!-- add code to create second row of thumbnail images here -->
+             <div class="w3-col s4">
+              <img
+                src="./images/forest-686af4957e9f2.jpg"
+                style="width: 100%; cursor: zoom-in"
+                onclick="document.getElementById('modal01').style.display='block'"
+                class="w3-hover-shadow"
+              />
+            </div>
+
+            <!-- second thumbnail image created below
+               we set 'modal02' in getElementById('modal02') -->
+            <div class="w3-col s4">
+              <img
+                src="./images/ocean-shore-686af4da9624b.jpg"
+                style="width: 100%; cursor: zoom-in"
+                onclick="document.getElementById('modal02').style.display='block'"
+                class="w3-hover-shadow"
+              />
+            </div>
+             <!-- third thumbnail image created below
+               we set 'modal02' in getElementById('modal02') -->
+            <div class="w3-col s4">
+              <img
+                src="./images/coast-view-686af3ac06609.jpg"
+                style="width: 100%; cursor: zoom-in"
+                onclick="document.getElementById('modal03').style.display='block'"
+                class="w3-hover-shadow"
+              />
+            </div>
+
+          <!-- add the first modal, set id="modal01"-->
+          <!-- each lightbox content (modal) should have a unique modal id -->
+          <div
+            id="modal01"
+            class="w3-modal"
+            onclick="this.style.display='none'"
+          >
+            <!-- add close button-->
+            <span
+              class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer"
+              >&times;</span
+            >
+            <!-- add modal background image -->
+            <div class="w3-modal-content w3-animate-zoom">
+              <h4 class="w3-center">Redwood Trees - 1</h4>
+              <img src="./images/forest-686af4957e9f2.jpg" style="width: 100%" />
+            </div>
+          </div>
+
+          <!-- add the second modal, set id="modal02"-->
+          <!-- each lightbox content (modal) should have a unique modal id -->
+          <div
+            id="modal02"
+            class="w3-modal"
+            onclick="this.style.display='none'"
+          >
+            <!-- add close button-->
+            <span
+              class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer"
+              >&times;</span
+            >
+            <!-- add modal background image -->
+            <div class="w3-modal-content w3-animate-zoom">
+              <h4 class="w3-center">Ocean</h4>
+              <img src="./images/ocean-shore-686af4da9624b.jpg" style="width: 100%" />
+            </div>
+          </div>
+
+          <!-- follow the samples above to continue adding modal for each thumbnail image -->
+          <!-- each lightbox content (modal) should have a unique modal id -->
+          <div
+            id="modal03"
+            class="w3-modal"
+            onclick="this.style.display='none'"
+          >
+            <!-- add code to add modal for each thumbnail image -->
        </div>
       </div>
        <hr />
