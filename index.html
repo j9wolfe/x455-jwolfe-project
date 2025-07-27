@@ -650,40 +650,40 @@
             <div class="w3-padding-16"></div>
 <table id="myTable" class="w3-table-all">
             <thead>
-              <tr class="w3-brown">
-                <th>Restaurant</th>
-                <th>Cusine</th>
-                <th>City</th>
-                <th>Cost</th>
+              <tr class="w3-brown w3-text-deep-green">
+                <th>RESTAURANT</th>
+                <th>CUSINE</th>
+                <th>CITY</th>
+                <th>BEST DISH!</th>
               </tr>
             </thead>
-            <tr class="w3-hover-sand">
-              <td><img src="./images/cream-better-6871d5f885b66.jpg" style="width: 120px" /></td>
+            <tr class="w3-hover-cream">
+              <td>Hunan Restaurant</td>
+              <td>Chinese/Thai</td>
+              <td>Eureka, CA</td>
+              <td>Chow Mein</td>
+            </tr>
+            <tr class="w3-hover-cream">
+              <td>
+                Asian Garden
+              </td>
+              <td>Chinese/American</td>
+              <td>Bandon, OR</td>
+              <td>Pork Fried Rice</td>
+            </tr>
+            <tr class="w3-hover-cream">
+              <td>The Dunes Cafe</td>
               <td>American</td>
-              <td>Eureka</td>
-              <td>$$</td>
+              <td>Florence, OR</td>
+              <td>Hamburger</td>
             </tr>
-            <tr class="w3-hover-sand">
+            <tr class="w3-hover-cream">
               <td>
-                <img src="./img/wooden-spoons-01.jpeg" style="width: 120px" />
+                Fulio's
               </td>
-              <td>Hand Tool</td>
-              <td>Wooden Spoon</td>
-              <td>Small</td>
-            </tr>
-            <tr class="w3-hover-sand">
-              <td><img src="./img/reamer-01.jpeg" style="width: 120px" /></td>
-              <td>Hand Tool</td>
-              <td>Citrus Reamer</td>
-              <td>Small</td>
-            </tr>
-            <tr class="w3-hover-sand">
-              <td>
-                <img src="./img/stand-mixer-01.jpeg" style="width: 120px" />
-              </td>
-              <td>Electronic Appliance</td>
-              <td>Stand Mixer</td>
-              <td>Big</td>
+              <td>Italian/Mediterranean</td>
+              <td>Astoria, OR</td>
+              <td>Chicken Parmigiana</td>
             </tr>
           </table>
           <!-- add sortable table end -->
@@ -779,6 +779,17 @@
         dots[slideIndex - 1].className += " w3-opacity-off";
       }
       // carousel slideshow end
+       // sortable table begin
+      $(document).ready(function () {
+        $("table#myTable").tablesorter({
+          sortList: [
+            [2, 1],
+          ] /* 1st number - column to sort, 2nd number - asending (2) or descending order (1) */,
+          CssAsc: "tablesorter-headerAsc",
+          CssDesc: "tablesorter-headerDesc",
+        });
+      });
+      // sortable table end
     </script>
     <!-- step 4: end -->
   </body>
