@@ -11,6 +11,17 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <!-- step 1: end -->
+      <!-- begin: add jquery script links to support for sortable table -->
+    <!-- jquery.min.js should be loaded before jquery.tablesorter.min.js because tablesorter requires basice jquery -->
+    <script
+      type="text/JavaScript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <script
+      type="text/JavaScript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"
+    ></script>
+    <!-- end: add jquery script links to support for sortable table -->
     <link rel="stylesheet" href="./css/w3.css" />
     <style>
       body {
@@ -58,8 +69,13 @@
         height: 300px;
         overflow: auto;
       }
+      
+.w3-round-large {
+  border-radius: 25px;
+}
     </style>
   </head>
+  <script src=""></script>
   <body>
     <!-- Navbar (sit on top) -->
     <div class="w3-top">
@@ -76,10 +92,10 @@
         <!-- step 1: add shopping cart and search icons -->
         <!-- Font Awesome 4 reference : https://www.w3schools.com/icons/icons_reference.asp -->
         <div>
-          <a class="w3-padding-large w3-hide-small w3-right"
+          <a class="w3-padding-large w3-hide-small w3-right w3-deep-green"
             ><i class="fa fa-shopping-basket"></i
           ></a>
-          <a class="w3-padding-large w3-hide-small w3-right"
+          <a class="w3-padding-large w3-hide-small w3-right w3-deep-green"
             ><i class="fa fa-search"></i
           ></a>
         </div>
@@ -120,7 +136,7 @@
     <!-- navbar - mobile version -->
     <!-- step 6: change mobile menu font color, size and background color -->
     <nav
-      class="w3-sidebar w3-bar-block w3-deep-green w3-card w3-animate-left w3-hide-medium w3-hide-large w3-text-deep-green w3-large"
+      class="w3-sidebar w3-bar-block w3-cream w3-card w3-animate-left w3-hide-medium w3-hide-large w3-text-deep-green w3-large"
       style="display: none"
       id="mySidebar"
     >
@@ -128,25 +144,26 @@
       <a
         href="javascript:void(0)"
         onclick="w3_close()"
-        class="w3-bar-item w3-button w3-large w3-padding-16"
+        class="w3-bar-item w3-button w3-large w3-padding-16 w3-deep-green"
+      
         >Close &times;</a
       >
 
       <!-- step 7: change mobile menu option text, font size and id reference -->
-      <a href="#highlights" onclick="w3_close()" class="w3-bar-item w3-button"
+      <a href="#highlights" onclick="w3_close()" class="w3-bar-item w3-button w3-cream"
         >Highlights</a
       >
-      <a href="#aboutus" onclick="w3_close()" class="w3-bar-item w3-button"
+      <a href="#aboutus" onclick="w3_close()" class="w3-bar-item w3-button w3-cream"
         >About Us</a
       >
-      <a href="#gallery" onclick="w3_close()" class="w3-bar-item w3-button"
+      <a href="#gallery" onclick="w3_close()" class="w3-bar-item w3-button w3-cream"
         >Gallery</a
         
       >
-       <a href="#video" onclick="w3_close()" class="w3-bar-item w3-button"
+       <a href="#video" onclick="w3_close()" class="w3-bar-item w3-button w3-cream"
         >Video</a
       >
-      <a href="#eats" onclick="w3_close()" class="w3-bar-item w3-button"
+      <a href="#eats" onclick="w3_close()" class="w3-bar-item w3-button w3-cream"
         >Eats</a
         >
       <!-- step 7: end -->
@@ -241,7 +258,7 @@
  <h4 class="w3-col s4 small-caps w3-text-deep-green">inspiration</h4>
     
    <div class="w3-row">
- <div class="w3-col s4 w3-padding w3-text-deep-green">
+ <div class="w3-col s4 w3-padding-16 w3-text-deep-green">
 <div
                 class="w3-text-cream"
                 style="
@@ -250,7 +267,7 @@
                   margin-top: -18px;
                 "
               >
-                <h2 class="w3-text-deep-green w3-text-bold">Seas to Trees</h2>
+                <h2 class="w3-text-deep-green w3-padding w3-text-bold">Seas to Trees</h2>
               </div>
  <div class="my-scrolling" style="padding-right: 10px">
                 <p>
@@ -281,21 +298,31 @@
 
       <hr />
       <!-- About Us Section -->
-      <div class="w3-row w3-greenb" id="aboutus";">
+      <div class="w3-container w3-padding-64 w3-greenb" id="aboutus">
         <div class="w3-padding-large">
+          
           <h4 class="small-caps w3-cream">about us</h4>
     <h2 class="w3-cream w3-text-bold">Our Coastal Crew</h2>
   <h2 class="w3-text-cream">Family of four</h2>
-          <div class="w3-padding-16">
+          
     
    <img
                 src="./images/fam-sunglasses0-686af3acce985.jpg"
-                class="w3-round w3-image my-float-right my-img-size-1"
+                class="w3-round w3-round-large my-float-right my-img-size-2 w3-padding-64"
                 alt="Family photo outside"
                 style="width: 100%"
               />
           
           <p class="w3-cream">
+            Our journey follows the winding coastal highways, where ocean meets forest, 
+            and every turn offers something new to discover.  This travelogue is a snapshot 
+            of our experience—breathtaking ocean views, misty forest hikes, epic sand dunes, 
+            and all the “wow” moments in between. We’re chasing fresh air, unforgettable sights, 
+            and the kind of memories that only come from hitting the open road together.  
+            Along the way, we’re sharing our favorite finds, tips for traveling with kids, 
+            and lots of photos to bring the trip to life. Whether you’re planning your own 
+            coastal adventure or just coming along for the ride, we’re glad you’re here!
+<br> <br>
             Our journey follows the winding coastal highways, where ocean meets forest, 
             and every turn offers something new to discover.  This travelogue is a snapshot 
             of our experience—breathtaking ocean views, misty forest hikes, epic sand dunes, 
@@ -323,23 +350,30 @@
                 >
               </span>
             </p>
-          </div>
-          </p>
+         
            </div>
 
        
-          <div class="w3-padding-large">
-           <div class="w3-padding-large">
+          <div class="w3-padding-large w3-greenb">
             <h4 class="small-caps w3-cream">map</h4>
     <h2 class="w3-cream w3-text-bold">The Journey</h2>
  
           <img
                 src="./images/map-of-trip-686af4dac400a.jpg"
-                class="w3-round w3-image my-float-left my-img-size-1"
+                class="w3-round w3-image my-float-left my-img-size-2"
                 alt="map"
                 style="width: 100%"
               />
           <p class="w3-cream">
+            Our journey follows the winding coastal highways, where ocean meets forest, 
+            and every turn offers something new to discover.  This travelogue is a snapshot 
+            of our experience—breathtaking ocean views, misty forest hikes, epic sand dunes, 
+            and all the “wow” moments in between. We’re chasing fresh air, unforgettable sights, 
+            and the kind of memories that only come from hitting the open road together.  
+            Along the way, we’re sharing our favorite finds, tips for traveling with kids, 
+            and lots of photos to bring the trip to life. Whether you’re planning your own 
+            coastal adventure or just coming along for the ride, we’re glad you’re here!
+<br> <br>
             Our journey follows the winding coastal highways, where ocean meets forest, 
             and every turn offers something new to discover.  This travelogue is a snapshot 
             of our experience—breathtaking ocean views, misty forest hikes, epic sand dunes, 
@@ -373,12 +407,30 @@
       <hr />
 
       <!-- Gallery Section -->
-      <div class="w3-container w3-padding-64" id="gallery">
+      <div class="w3-container w3-padding" id="gallery">
+        
         <div class="w3-padding-large">
         <h4 class="small-caps w3-text-deep-green">gallery</h4>
     <h2 class="w3-text-deep-green w3-text-bold">Seas to Trees</h2>
   <h2 class="w3-text-deep-green">NorCal to Oregon Coast</h2>
-          <div class="w3-padding-16">
+  <p>Our journey follows the winding coastal highways, where ocean meets forest, 
+            and every turn offers something new to discover.  This travelogue is a snapshot 
+            of our experience—breathtaking ocean views, misty forest hikes, epic sand dunes, 
+            and all the “wow” moments in between. We’re chasing fresh air, unforgettable sights, 
+            and the kind of memories that only come from hitting the open road together.  
+            Along the way, we’re sharing our favorite finds, tips for traveling with kids, 
+            and lots of photos to bring the trip to life. Whethe</p>
+
+
+         
+  
+  <div></div>
+  <br>
+  
+  
+  
+  
+  <div class="w3-padding-16">
         <!-- step 1: add image files to img folder -->
           <!--    each lightbox should have a thumbnail image and a larger image -->
           <!-- step 2: add thumbnail image -->
@@ -508,25 +560,146 @@
             class="w3-modal"
             onclick="this.style.display='none'"
           >
+           <!-- add close button-->
+            <span
+              class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer"
+              >&times;</span
+            >
+            <!-- add modal background image -->
+            <div class="w3-modal-content w3-animate-zoom">
+              <h4 class="w3-center">Coast</h4>
+              <img src="./images/coast-view-686af3ac06609.jpg" style="width: 100%" />
+            </div>
+          </div>
             <!-- add code to add modal for each thumbnail image -->
        </div>
       </div>
        <hr />
       <!-- Video Section -->
       <div class="w3-container w3-padding-64" id="video">
-        <div class="w3-padding-large">
-        <h1 class="w3-center">Video</h1>
+         <h4 class="small-caps w3-text-deep-green">video</h4>
+    <h2 class="w3-text-deep-green w3-text-bold">On the Trail</h2>
+  <h2 class="w3-text-deep-green">Gorgeous Hikes</h2>
+ 
+ <div class="w3-row">
+  <p>Our journey follows the winding coastal highways, where ocean meets forest, 
+            and every turn offers something new to discover.  This travelogue is a snapshot 
+            of our experience—breathtaking ocean views, misty forest hikes, epic sand dunes, 
+            and all the “wow” moments in between. We’re chasing fresh air, unforgettable sights, 
+            and the kind of memories that only come from hitting the open road together.  
+            Along the way, we’re sharing our favorite finds, tips for traveling with kids, 
+            and lots of photos to bring the trip to life. Whethe</p>
+
+            <!-- create 1st column -->
+            <div class="w3-col m4 w3-center">
+              <!-- paste the YouTube video link -->
+              <iframe
+                height="300"
+                src="https://www.youtube.com/embed/SkH5WKHgklI?si=zNb0ORKbJmrmGROy"
+                title="Basic Knife Skills"
+                frameborder="0"
+                allow="autoplay;"
+              >
+              </iframe>
+            </div>
+ <div class="w3-col m4 w3-center">
+              <!-- paste the YouTube video link -->
+              <iframe
+                height="300"
+                src="https://www.youtube.com/embed/30t_EsuGG60?si=FhwBWwuW5L3LNUUA"
+                title="Basic Knife Skills"
+                frameborder="0"
+                allow="autoplay;"
+              >
+              </iframe>
+            </div>
+ <div class="w3-col m4 w3-center">
+              <!-- paste the YouTube video link -->
+              <iframe
+                height="300"
+                src="https://www.youtube.com/embed/t0jcNefEiBM"
+                title="Basic Knife Skills"
+                frameborder="0"
+                allow="autoplay;"
+              >
+              </iframe>
+            </div>
+          </div>
+
+
+
+
        </div>
       </div>
        <hr />
       <!-- Eats Section -->
-      <div class="w3-container w3-padding-64" id="eats">
-        <div class="w3-padding-large">
-        <h1 class="w3-center">Eats</h1>
-       </div>
+      <div class="w3-container w3-padding-64 w3-greenb" id="eats">
+<div class="w3-padding-large">
+         <h4 class="small-caps w3-cream">eats</h4>
+    <h2 class="w3-text-cream w3-text-bold">Good Grub</h2>
+  <h2 class="w3-text-cream">Delicious Food</h2>
+  <div class="w3-padding-16">
+    <p class="w3-text-cream">Our journey follows the winding coastal highways, where ocean meets forest, 
+            and every turn offers something new to discover.  This travelogue is a snapshot 
+            of our experience—breathtaking ocean views, misty forest hikes, epic sand dunes, 
+            and all the “wow” moments in between. We’re chasing fresh air, unforgettable sights, 
+            and the kind of memories that only come from hitting the open road together.  
+            Along the way, we’re sharing our favorite finds, tips for traveling with kids, 
+            and lots of photos to bring the trip to life. Whethe</p>
+            <div class="w3-padding-16"></div>
+<table id="myTable" class="w3-table-all">
+            <thead>
+              <tr class="w3-brown">
+                <th>Restaurant</th>
+                <th>Cusine</th>
+                <th>City</th>
+                <th>Cost</th>
+              </tr>
+            </thead>
+            <tr class="w3-hover-sand">
+              <td><img src="./images/cream-better-6871d5f885b66.jpg" style="width: 120px" /></td>
+              <td>American</td>
+              <td>Eureka</td>
+              <td>$$</td>
+            </tr>
+            <tr class="w3-hover-sand">
+              <td>
+                <img src="./img/wooden-spoons-01.jpeg" style="width: 120px" />
+              </td>
+              <td>Hand Tool</td>
+              <td>Wooden Spoon</td>
+              <td>Small</td>
+            </tr>
+            <tr class="w3-hover-sand">
+              <td><img src="./img/reamer-01.jpeg" style="width: 120px" /></td>
+              <td>Hand Tool</td>
+              <td>Citrus Reamer</td>
+              <td>Small</td>
+            </tr>
+            <tr class="w3-hover-sand">
+              <td>
+                <img src="./img/stand-mixer-01.jpeg" style="width: 120px" />
+              </td>
+              <td>Electronic Appliance</td>
+              <td>Stand Mixer</td>
+              <td>Big</td>
+            </tr>
+          </table>
+          <!-- add sortable table end -->
+        </div>
       </div>
 
 
+
+
+
+
+
+
+  </div>
+</div>
+      </div>
       <!-- End page content -->
     </div>
 
