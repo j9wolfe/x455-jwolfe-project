@@ -69,7 +69,31 @@
         height: 300px;
         overflow: auto;
       }
-      
+.flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 0;
+      }
+
+      .flex-container > div {
+        width: 20%;
+        padding: 5px;
+      }
+
+      /* add @media and change the .flex-container > div styles, such as width: 35% to see the difference */
+      @media screen and (max-width: 750px) {
+        .flex-container > div {
+          width: 30%;
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        .flex-container > div {
+          width: 45%;
+        }
+      }
 .w3-round-large {
   border-radius: 25px;
 }
@@ -193,9 +217,9 @@
     </header>
 
     <!-- Page content -->
-    <div class="w3-content" style="max-width: 1100px">
+    <div class="w3-container" style="max-width: 1100px">
       <!-- Highligths Section -->
-      <div class="w3-row w3-padding-64 w3-deep-green" id="highlights">
+      <div class="w3-row w3-deep-green" id="highlights">
         <div
         class="w3-deep-green"
       >
@@ -250,15 +274,11 @@
         <div></div>
         
         <div class="w3-row w3-padding-64" id="highlights">
-          <div>
-            
-                  
-                  
         <div class="w3-padding-large">
  <h4 class="w3-col s4 small-caps w3-text-deep-green">inspiration</h4>
-    
+      
    <div class="w3-row">
- <div class="w3-col s4 w3-padding-16 w3-text-deep-green">
+ <div class="w3-col m6 w3-padding-16 w3-text-deep-green">
 <div
                 class="w3-text-cream"
                 style="
@@ -280,18 +300,30 @@
                   Our route winds along the coast and deep into the trees, where curiosity leads 
                   the way and the map is only half the story. This blog is our trail journal—a 
                   mix of salty air, muddy boots, spontaneous detours, and wide-eyed moments we’ll never forget.
+                  What began as a family craving adventure turned into a journey through 
+                  the ever-changing landscapes where ocean spray meets forest mist. With 
+                  two kids in the backseat and a car packed with snacks, hiking boots, and 
+                  way too many stuffed animals, we hit the road in search of something more—more 
+                  wonder, more wild, more time together. From windswept beaches to towering 
+                  redwoods, every stop offers a new chance to explore, climb, splash, and discover. 
+                  Our route winds along the coast and deep into the trees, where curiosity leads 
+                  the way and the map is only half the story. This blog is our trail journal—a 
+                  mix of salty air, muddy boots, spontaneous detours, and wide-eyed moments we’ll never forget.
 
                 </p>
                 </div>
-               
-                 <div class="w3-padding-large"></div>
-                <img src="./images/family-fun-pic-686af49452991.jpg" class="w3-round w3-image my-float-left my-img-size-1" 
+ </div>
+<div class="w3-col m6 w3-padding-large w3-text-deep-green">
+
+                 <div style="padding-right: 20px;">
+                <img src="./images/family-fun-pic-686af49452991.jpg" class="w3-round w3-image my-float-left my-img-size-2" 
                 alt="family photo" style="width: 100%">
-                <div class="w3-padding-large"></div>
+                <div class="w3-padding-16"></div>
                 <div></div>
                 
    </div>
        <div></div>
+       </div>
       <hr />
  </div>
       </div>
@@ -404,15 +436,20 @@
       </div>
 
       
-      <hr />
+    
 
       <!-- Gallery Section -->
-      <div class="w3-container w3-padding" id="gallery">
-        
-        <div class="w3-padding-large">
+       <div class="w3-content" style="max-width: 1100px;">
+      <div class="w3-row w3-deep-green" id="gallery">
+        </div>
+        <div class="w3-padding-large w3-deep-green">
         <h4 class="small-caps w3-text-deep-green">gallery</h4>
+<div class="w3-row">
+    <div class="w3-col m6 w3-text-deep-green"> 
     <h2 class="w3-text-deep-green w3-text-bold">Seas to Trees</h2>
   <h2 class="w3-text-deep-green">NorCal to Oregon Coast</h2>
+  
+  
   <p>Our journey follows the winding coastal highways, where ocean meets forest, 
             and every turn offers something new to discover.  This travelogue is a snapshot 
             of our experience—breathtaking ocean views, misty forest hikes, epic sand dunes, 
@@ -421,9 +458,17 @@
             Along the way, we’re sharing our favorite finds, tips for traveling with kids, 
             and lots of photos to bring the trip to life. Whethe</p>
 
+</div>
+       
+  <div class="w3-col m6 w3-padding-large">
+<img src="./images/family-cute0-686af49452314.jpg" class="w3-round w3-image my-float-right my-img-size-2"        
+alt="family cute" style="width: 100%">
+<div class="w3-padding-64"></div>
+<div></div>
 
-         
-  
+    
+  </div>
+ 
   <div></div>
   <br>
   
@@ -577,12 +622,14 @@
       </div>
        <hr />
       <!-- Video Section -->
-      <div class="w3-container w3-padding-64" id="video">
+      <div class="w3-container" id="video">
          <h4 class="small-caps w3-text-deep-green">video</h4>
+         <div class="w3-row">
+          <div class="w3-col m6 w3-padding w3-text-deep-green">
+
     <h2 class="w3-text-deep-green w3-text-bold">On the Trail</h2>
   <h2 class="w3-text-deep-green">Gorgeous Hikes</h2>
  
- <div class="w3-row">
   <p>Our journey follows the winding coastal highways, where ocean meets forest, 
             and every turn offers something new to discover.  This travelogue is a snapshot 
             of our experience—breathtaking ocean views, misty forest hikes, epic sand dunes, 
@@ -590,8 +637,21 @@
             and the kind of memories that only come from hitting the open road together.  
             Along the way, we’re sharing our favorite finds, tips for traveling with kids, 
             and lots of photos to bring the trip to life. Whethe</p>
+            </div>
 
+
+<div class="w3-col m6 w3-padding w3-text-deep-green">
+<div style="padding-right: 20px;">
+  <img src="./images/family-fun-pic-686af49452991.jpg" class="w3-round w3-image my-float-right my-img-size-2
+  " alt="fam photo" style="width: 100%;">
+</div>
+<div></div>
+<div></div>
+</div>
+</div>
+</div>
             <!-- create 1st column -->
+             <div class="w3-row">
             <div class="w3-col m4 w3-center">
               <!-- paste the YouTube video link -->
               <iframe
@@ -626,16 +686,17 @@
               </iframe>
             </div>
           </div>
-
+</div>
 
 
 
        </div>
       </div>
+      <div></div>
        <hr />
       <!-- Eats Section -->
       <div class="w3-container w3-padding-64 w3-greenb" id="eats">
-<div class="w3-padding-large">
+<div class="w3-padding-large w3-greenb">
          <h4 class="small-caps w3-cream">eats</h4>
     <h2 class="w3-text-cream w3-text-bold">Good Grub</h2>
   <h2 class="w3-text-cream">Delicious Food</h2>
