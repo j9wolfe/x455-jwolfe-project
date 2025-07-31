@@ -180,10 +180,15 @@ textarea {
 /* End extract */
 html,
 body {
-  font-family: Verdana, sans-serif;
-  font-size: 15px;
+  font-family: montserrat-my-font, sans-serif; 
+  font-size: 16px;
   line-height: 1.5;
 }
+.montserrat-my-font {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;}
 html {
   overflow-x: hidden;
 }
@@ -815,6 +820,11 @@ a {
   left: 0;
   bottom: 0;
 }
+.w3-display-bottom-middle-left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
 .w3-display-bottomright {
   position: absolute;
   right: 0;
@@ -1195,6 +1205,13 @@ a {
 }
 .w3-padding-16 {
   padding-top: 16px !important;
+  padding-bottom: 16px !important;
+}
+.w3-padding-left {
+  padding-left: 20px !important;
+}
+.w3-padding-bottom {
+  padding-top: 4px !important;
   padding-bottom: 16px !important;
 }
 .w3-padding-24 {
