@@ -820,6 +820,16 @@ a {
   left: 0;
   bottom: 0;
 }
+.my-display-bottomleft {
+  position: absolute;
+  left: 20px;
+  bottom: 150px;
+}
+.my-display-bottom-quote {
+  position: absolute;
+  left: 30px;
+  bottom: 210px;
+}
 .w3-display-bottom-middle-left {
   position: absolute;
   left: 0;
