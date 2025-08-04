@@ -1372,6 +1372,10 @@ a {
 .w3-hover-greenb:hover {
   background-color: #0f4236 !important;
   }
+  .w3-creamb,
+.w3-hover-greenb:hover {
+  background-color: #F8F3E9 !important;
+  }
 .w3-deep-green,
 .w3-hover-deep-green:hover {
   color: #0f4236 !important;
